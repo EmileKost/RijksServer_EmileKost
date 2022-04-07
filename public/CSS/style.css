@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: montserrat;
+    background: #212529;
+}
+
+header {
+    height: 5em;
+    display: flex;
+    background-color: #343a40;
+    border-bottom: 3px solid #e8eddf;
+}
+
+header h1 {
+    color: #e8eddf;
+    opacity: 95%;
+    font-size: 5vw ;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 2.5%;
+}
+
+input {
+    width: 250px;
+    height: 4vh;
+    margin-top: 3%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    background: #e8eddf;
+    border: none;
+    border-radius: 15px;
+}
+
+input {
+    display: row;
+    flex-direction: column;
+    justify-content: center;
+}
+
+button {
+    align-content: center;
+    width: 100px;
+    height: 30px;
+    background-color: #2a9d8f;
+    border: 2px solid #2a9d8f;
+    border-radius: 15px;
+}
+
+input::placeholder {
+    color :#343a40;
+}
+
+img {
+    width: 95%;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+    border-radius: 0.5%;
+    box-shadow: 1px 1px #e8eddf;
+}
+
+main p {
+    font-size: 3vw;
+    margin-left: 2.5%;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+    color: #edf2f4;
+}
+
+
+h2 {
+   margin-top: 5%;
+   margin-left: 2.5%;
+   margin-right: 7.5%;
+   font-size: 3vw;
+   color: #e8eddf;
+}
+
+#koptekst {
+    margin-left: 2.5%;
+    margin-right: 7.5%;
+    font-size: 5vw;
+    color: #e8eddf;
+}
+
+#error {
+    text-align: center;
+    font-size: 30px;
+}
+
+#feedback-melding {
+    color:#e8eddf;
+    padding: 2%;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#error-melding {
+    color: #e8eddf;
+    text-align: center;
+    font-weight: bold;
+}
+
+#resultatenHeader{
+    margin-left: 2.5%;
+    margin-top: 5%;
+    text-align: left;
+    color: #e8eddf !important;
+}
+
+footer {
+    margin-bottom: 20%;
+}
+
+.hide {
+    display: none;
+}
+
+#eind-melding {
+    text-align: center;
+    color:#e8eddf
+}
+
+/* Styling voor error pagina */
+
+#main-error p {
+    text-align: center;
+    margin-top: 50%;
+    margin-bottom: 50%;
+}
