@@ -66,7 +66,7 @@ Om items te cachen moest ik eerst een cacheName aanmaken waar de content ik kan 
 die ik in de cache wil zetten.
 
 ### Activity diagram!
-[Wireframe](https://user-images.githubusercontent.com/70690100/162421793-7bfe049a-cc48-47d6-b6c7-b1c92f24bbb1.png)
+![activityDiagram](https://user-images.githubusercontent.com/70690100/162421890-f41681b0-fae5-4bc7-bc7b-95c9c9b49b2b.png)
 
 ### Optimilization
 #### Compress
