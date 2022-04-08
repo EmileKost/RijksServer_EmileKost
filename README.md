@@ -45,6 +45,13 @@ Toen de server eenmaal was opgezet kon ik gaan beginnen met het fetchen van de d
 Naast het ophalen van willekeurige kunstwerken is er ook nog een zoekfunctie. De zoekfunctie heeft een request. Deze request is wilt weten wat de query in de url van de API is. Door deze query op te halen kunnen de juiste kunstwerken gerendert worden en kan de response de '/search' pagina renderen.
 <img width="964" alt="Schermafbeelding 2022-04-08 om 08 09 30" src="https://user-images.githubusercontent.com/70690100/162375050-35d55cf0-2e34-4b78-ae64-106ff7b07bec.png">
 
+### Details pagina
+Als de gebruiker meer informatie wilt zien is er nog een detailspagina beschikbaar waar hij meer informatie over de kunstwerken kan weten. Dit is haalbaar geworden door de `${req.params.id}` daarna wordt in het detail.ejs bestand de detail informatie gerendert.
+<img width="935" alt="Schermafbeelding 2022-04-08 om 12 55 22" src="https://user-images.githubusercontent.com/70690100/162422238-5b68b50e-27ca-4195-89b4-3cb9<img width="935" alt="Schermafbeelding 2022-04-08 om 12 55 22" src="https://user-images.githubusercontent.com/70690100/162422448-388a2cc8-ccd9-4d42-8424-b052c4ab76aa.png">
+30f070c7.png">
+![Uploading Schermafbeelding 2022-04-08 om 12.55.22.png…]()
+
+
 ### Server Worker
 Om zometeen offline content te kunnen leveren aan de gebruiker heb ik gebruik gemaakt van een service worker. De service worker kan verschillende soorten content fetchen en in een cache zetten. Dit zorgt ervoor dat de gebruiker offline ook nog content beschikbaar heeft. De code van de service worker zit in een apart sw.js bestand.
 
@@ -72,6 +79,10 @@ die ik in de cache wil zetten.
 #### Compress
 <img width="435" alt="Schermafbeelding 2022-04-08 om 08 26 24" src="https://user-images.githubusercontent.com/70690100/162377123-3169563e-ddf2-46d6-a0ae-9b80998047f4.png">
 Ik heb compress gebruikt voor een betere performance
+
+#### Cache Headers
+<img width="637" alt="Schermafbeelding 2022-04-08 om 12 57 41" src="https://user-images.githubusercontent.com/70690100/162422604-5b8192ea-33be-463e-b231-9b90e55f2c80.png">
+Cache headers is gebruikt om te optimaliseren.
 
 #### Image slice
 <img width="733" alt="Schermafbeelding 2022-04-08 om 08 27 20" src="https://user-images.githubusercontent.com/70690100/162377247-19a7f3fd-7082-4ef6-9302-03b69e2611ec.png">
