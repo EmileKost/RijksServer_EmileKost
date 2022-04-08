@@ -22,6 +22,7 @@
 <section id="mainContent" class="">
    <ul>
      <% data.forEach((artObject) => { %>
+    <a href="<%=artObject.objectNumber%>">
     <li>
         <h2>
             <%=artObject.longTitle%>
@@ -31,6 +32,7 @@
         </p>
         <img src=<%=artObject.webImage.url.slice(0, -3)+"=s300"%> alt=<%=artObject.title%>>
         </li>
+        </a>
     <% }) %>   
 </ul>
 </section>
