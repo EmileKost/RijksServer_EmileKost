@@ -74,7 +74,7 @@ Ik heb compress gebruikt voor een betere performance
 
 #### Image slice
 <img width="733" alt="Schermafbeelding 2022-04-08 om 08 27 20" src="https://user-images.githubusercontent.com/70690100/162377247-19a7f3fd-7082-4ef6-9302-03b69e2611ec.png">
-Ik heb .slice gebruikt zodat de images niet op hun optimale resolutie worden ingeladen omdat dit heel veel tijd en internet kost. 
+Ik heb .slice gebruikt zodat de images niet op hun optimale resolutie worden ingeladen omdat dit heel veel tijd en internet kost.
 
 #### Inital Server Response Time
 <img width="745" alt="Schermafbeelding 2022-04-08 om 08 29 06" src="https://user-images.githubusercontent.com/70690100/162377470-3d2e1cc9-6737-49f6-a702-6aace658e0b0.png">
