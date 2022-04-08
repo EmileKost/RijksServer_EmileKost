@@ -25,6 +25,11 @@ header h1 {
     margin-left: 2.5%;
 }
 
+a {
+    text-decoration: none;
+    color: #e8eddf;
+}
+
 input {
     width: 250px;
     height: 4vh;
@@ -57,6 +62,7 @@ input::placeholder {
 
 img {
     width: 95%;
+    margin-top: 2.5%;
     margin-right: 2.5%;
     margin-left: 2.5%;
     border-radius: 0.5%;
