@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js"
   },
   "dependencies": {
     "assert": "^2.0.0",
@@ -12,9 +12,7 @@
     "ejs": "^3.1.6",
     "express": "^4.17.3",
     "lru-cache": "^7.7.3",
-    "node-fetch": "^2.6.7"
-  },
-  "devDependencies": {
+    "node-fetch": "^2.6.7",
     "nodemon": "^2.0.15"
   }
 }
