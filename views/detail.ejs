@@ -1,0 +1,15 @@
+<%- include('./partials/head') %>
+<header>
+    <h1><%=data.title%></h1>
+</header>
+<main>
+   <ul>
+       <li>
+           <img src="<%=data.webImage.url.slice(0, -3)+"=s300"%>">
+       <h2><%=data.longTitle%></h2>
+       <p><%=data.plaqueDescriptionEnglish%></p>
+       </li>
+   </ul>
+</main>
+
+<%- include('./partials/foot') %>
