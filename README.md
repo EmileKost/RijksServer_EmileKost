@@ -65,7 +65,8 @@ Hier wordt het fetch event aangemaakt. Dit zorgt ervoor dat de service worker de
 Om items te cachen moest ik eerst een cacheName aanmaken waar de content ik kan worden opgeslagen. Daarna heb ik een array gemaakt met assets met bestanden 
 die ik in de cache wil zetten.
 
-### Activity Diagram
+### Activity diagram!
+[Wireframe](https://user-images.githubusercontent.com/70690100/162421793-7bfe049a-cc48-47d6-b6c7-b1c92f24bbb1.png)
 
 ### Optimilization
 #### Compress
