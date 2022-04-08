@@ -18,9 +18,12 @@ middel van cache. Als laatste is de Rijksmuseum app geoptimaliseerd naar een bet
 * `npm start` om te beginnen
 
 ### Server
-Om de app te kunnen runnen heb ik een server aangemaakt in het app.js bestand.  
+Om de app te kunnen runnen heb ik een server aangemaakt in het app.js bestand. 
+
 <img width="323" alt="Schermafbeelding 2022-04-08 om 07 50 13" src="https://user-images.githubusercontent.com/70690100/162372898-80627742-7d83-44f1-8c78-98957eeaf7dd.png">
+
 <img width="508" alt="Schermafbeelding 2022-04-08 om 07 50 59" src="https://user-images.githubusercontent.com/70690100/162372976-6d6d4f30-23d0-4135-8e12-bf0438588fc8.png">
+
 De app luistert op localhost:3000.
 
 Om verder gaan in het omzetten naar een server side app moesten er verschillende packages worden geinstalleerd. De app is voornamelijk met Node.js,
