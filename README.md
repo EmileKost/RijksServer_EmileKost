@@ -28,6 +28,7 @@ De app luistert op localhost:3000.
 
 Om verder gaan in het omzetten naar een server side app moesten er verschillende packages worden geinstalleerd. De app is voornamelijk met Node.js,
 Express en EJS gebouwd.
+
 <img width="340" alt="Schermafbeelding 2022-04-08 om 07 53 57" src="https://user-images.githubusercontent.com/70690100/162373275-6226bc76-29ca-41fc-b24a-fc683f12bc1e.png">
 
 Als de packages eenmaal geinstalleerd zijn door middel van `npm install package` moeten deze nog geactiveerd worden in het app.js file. Ook moet
