@@ -10,9 +10,9 @@ const app  = express();
 const fetch = require('node-fetch');
 const { response } = require('express');
 
-//Zou zorgen voor betere performances, niet helemaal duidelijk geworden
-const LRU = require('lru-cache');
-const assert = require('assert')
+// //Zou zorgen voor betere performances, niet helemaal duidelijk geworden
+// const LRU = require('lru-cache');
+// const assert = require('assert')
 
 
 const compression = require('compression');
