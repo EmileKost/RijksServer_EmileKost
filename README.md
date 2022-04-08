@@ -7,3 +7,9 @@ middel van cache. Als laatste is de Rijksmuseum app geoptimaliseerd naar een bet
 
 ### User Story
 * As an art lover, I want to be able to search and view art from the Rijksmuseum at home, so that I can still enjoy art during a lockdown.
+
+### Clone this repo
+- vragen!!!
+
+### Navigate 
+$ CD 
