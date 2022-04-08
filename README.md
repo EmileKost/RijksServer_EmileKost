@@ -6,4 +6,4 @@ side rendering door gebruik te maken van Node js en Express, en door service wor
 middel van cache. Als laatste is de Rijksmuseum app geoptimaliseerd naar een betere performance.
 
 ### User Story
-**As an art lover, I want to be able to search and view art from the Rijksmuseum at home, so that I can still enjoy art during a lockdown.
+* As an art lover, I want to be able to search and view art from the Rijksmuseum at home, so that I can still enjoy art during a lockdown.
