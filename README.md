@@ -94,8 +94,10 @@ Vanwege deze opportunity schommelt de performance tussen de 90 en 100. Het is on
 Ik ben er helaas niet uitgekomen hoe ik dit zou moeten oplossen, dit omdat mij uitgelegd is dat het probleem ook kan liggen bij de server van het Rijksmuseum zelf. 
 <img width="700" alt="Schermafbeelding 2022-04-08 om 08 28 42" src="https://user-images.githubusercontent.com/70690100/162377681-34c769d1-9da2-4c62-b2df-77ec2a7f207a.png">
 
-
-
+### Wishlist
+- Ik had graag nog de Server Response Time willen verbeteren, maar met gebrek aan kennis en tijd is dit helaas nog niet gelukt.
+- Ik had mij beter willen verdiepen in optimaliseren
+- Ik had graag nog gewild dat de detailpagina offline had kunnen worden geladen door middel van de service worker
 
 
 
