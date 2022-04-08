@@ -53,7 +53,11 @@ Als de gebruiker meer informatie wilt zien is er nog een detailspagina beschikba
 
 
 ### Server Worker
-Om zometeen offline content te kunnen leveren aan de gebruiker heb ik gebruik gemaakt van een service worker. De service worker kan verschillende soorten content fetchen en in een cache zetten. Dit zorgt ervoor dat de gebruiker offline ook nog content beschikbaar heeft. De code van de service worker zit in een apart sw.js bestand.
+Om zometeen offline content te kunnen leveren aan de gebruiker heb ik gebruik gemaakt van een service worker. De service worker kan verschillende soorten content fetchen en in een cache zetten. Dit zorgt ervoor dat de gebruiker offline ook nog content beschikbaar heeft. De code van de service worker zit in een apart sw.js bestand. Mijn server worker zorgt voor:
+* Offline kunnen zien van 10 verschillende kunstwerken
+* Styling van CSS kan worden gebruikt
+* Fonts kunnen worden ingeladen
+* Index pagina kan worden gerendert
 
 #### Install event Service Worker
 <img width="472" alt="Schermafbeelding 2022-04-08 om 08 12 55" src="https://user-images.githubusercontent.com/70690100/162375551-85e27bb2-0ee9-4ad2-b4e2-f6ce3f850b54.png">
