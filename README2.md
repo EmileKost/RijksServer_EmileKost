@@ -119,4 +119,68 @@ Als de gebruiker extra informatie nodig heeft kan die van elk kunstwerk de detai
 ````
 Bij de detailpagina kan de juiste content worden ingeladen omdat het objectId van het kunstwerk vanuit de url wordt opgehaald. Dit id kan aan de url worden toegevoegd zodat alleen voor het desbetreffende kunstwerk de data wordt opgehaald. Als het id is toegevoegd wordt de data met dezelfde methode opgehaald en gerenderd. Dit maal wordt de detail pagina gerenderd met daarin de extra informatie voor het kunstwerk.
 
+## Service worker
+In de Rijks Kunstwerken Bibilotheek heb ik gebruik gemaakt van een service worker. Een service worker draait op de achtergrond en zorgt ervoor dat er data offline kan worden opgeslagen. Door de service worker is er er voor de gebruiker altijd een deel van de content zichtbaar, ook als deze geen of slecht internet heeft.
+De service worker heeft drie verschillende events. 
+
+### 1. Install event
+````
+self.addEventListener('install', (event) => {
+    event.waitUntil( 
+     caches.open(staticCacheName)
+        .then(cache => {
+        console.log('I am caching items!');
+        cache.addAll(assets);
+        })
+    ); 
+});
+````
+````
+const staticCacheName = 'Static-Website-v1';
+const assets = [
+    '/',
+    'CSS/style.css',
+    'pleuris.js',
+    'images/logoRijks.png',
+    'error.html',
+];
+````
+Het eerste event is het install event. Deze functie wordt één keer uitgevoerd. In het install event wordt de service worker geinstalleerd. Dit is de eerste stap voor het activeren van de serivce worker. Als de service worker is geinstalleerd kunnen alle aangegeven items in de cache worden geplaats voor offline gebruik. Door middel van .addAll worden alle aangegeven items in de cache geplaats voor offline gebruik. In de assets array is aangegeven welke elementen er aan de cache moeten worden toegevoegd.
+
+
+### 2. Activate event
+````
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+        caches.keys().then(keys => {
+            return Promise.all(keys
+                .filter(key => key !== staticCacheName)
+                .map(key => caches.delete(key))
+                )
+        })
+    )
+});
+````
+In het activate event wordt de huidige cache vergeleken met eventueel veranderde content. Het activate event zorgt ervoor dat de cache wordt geupdatet en de gebruiker de meest huidige versie van de webapp te zien krijgt. Alle eerder opgeslagen content dat is verandert wordt verwijdert en vervangen door de meest nieuwe versie.
+
+### 3. Fetch event
+````
+self.addEventListener('fetch', (event)=> {
+    // console.log('An fetch event has taken place', event);
+    event.respondWith(
+        caches.match(event.request).then(cacheResponse => {
+            return cacheResponse || fetch(event.request)
+        })
+    );
+})
+````
+Bij het fetch event gaat de request vanuit de client eerst naar de sevice worker. De service worker kan de al bestaande content in de cache terug leveren aan de gebruiker met de cacheResponse. 
+
+## Optimilization
+
+<img width="483" alt="Schermafbeelding 2022-06-29 om 15 42 41" src="https://user-images.githubusercontent.com/70690100/176451454-4593ee35-4351-438b-aaba-15c8d6d857d9.png">
+Voordat ik ben begonnen met het optimaliseren van de webapp heb ik eerst op de browser Google Chrome een Lighthouse rapport kunnen doen. De uitslag van het rapport was niet verschrikkelijk met een score vaan 85 op performance. Het grootste probleem is het ophalen van de hoge resolutie foto's vanuit de Rijksmuseum API. Tevens werd aangegeven dat de fotos geen expliciete grootte hebben. Het is belangrijk dat de foto's een mindere resolutie krijgen en dat een deel van de content in de cache wordt gezet. 
+
+
+
 
