@@ -213,7 +213,18 @@ app.use(setCache)
 ### 3. Verminder de resolutie en geef een vaste grootte
 Om het grootste pijnpunt weg te halen moest de resolutie van de verkregen data worden vermindert. Dit kan door in de html .slice te gebruiken. Dit zorgt voor een kortere laad tijd en zal de performance verbeteren. Tevens hebben de foto's nu een vaste breedte zodat de structuur van de pagina minder vaak hoeft te veranderen wat ook weer zorgt voor een betere performance.
 ````
-
+ <img src=<%=artObject.webImage.url.slice(0, -3)+"=s500" %> alt=<%=artObject.title%>>
+ ````
+ 
+ ### Uitslag
+ ![Schermafbeelding 2022-06-29 om 19 48 07](https://user-images.githubusercontent.com/70690100/176502848-3819dbeb-8826-46d2-8959-3dd4b2eff762.png)
+ De performance is door deze drie veranderingen sterk omhoog gegaan. De performance zit nu op 99. Dit schommelt soms nog wel vanwege de server response time. Dit heeft vaak te maken met de data die moet worden opgehaald en heb ik helaas geen invloed op.
+ 
+ ## Wishlist
+ * Ik had graag de server response tijd willen verbeteren
+ * Werkende filter functie
+ * Opslaan van kunstwerken
+ 
 
 
 
