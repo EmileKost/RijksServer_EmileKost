@@ -180,6 +180,39 @@ Bij het fetch event gaat de request vanuit de client eerst naar de sevice worker
 
 <img width="483" alt="Schermafbeelding 2022-06-29 om 15 42 41" src="https://user-images.githubusercontent.com/70690100/176451454-4593ee35-4351-438b-aaba-15c8d6d857d9.png">
 Voordat ik ben begonnen met het optimaliseren van de webapp heb ik eerst op de browser Google Chrome een Lighthouse rapport kunnen doen. De uitslag van het rapport was niet verschrikkelijk met een score vaan 85 op performance. Het grootste probleem is het ophalen van de hoge resolutie foto's vanuit de Rijksmuseum API. Tevens werd aangegeven dat de fotos geen expliciete grootte hebben. Het is belangrijk dat de foto's een mindere resolutie krijgen en dat een deel van de content in de cache wordt gezet. 
+Voor het optimaliseren heb ik drie verschillende dingen gedaan:
+
+### 1. Compression
+De eerste oplossing voor een betere performance is de middleware genaamd compression. Compression zorgt ervoor dat de grootte van de data dat naar de gebruiker moet worden gestuurd zo klein mogelijk is.
+```
+$ npm install compression
+````
+````
+const compression = require('compression');
+
+app.use(compression());
+````
+Eerst moet de middleware worden gedownload door middel van npm. Daarna moet er een variabele van compression worden gemaakt en kan er aangegeven worden dat de app compression moet gebruiken door middel van app.use .
+
+### 2. Caching headers
+Met hulp uit mensen van de klas heb ik caching headers kunnen gebruiken. Caching headers zorgt ervoor dat automatisch na een bepaalde tijd elementen uit de cache worden gehaald. 
+````
+let setCache = function (req, res, next) {
+  const period = 60 * 60 * 24 * 365; 
+    if (req.method == 'GET') {
+      res.set('Cache-control', `public, max-age=${period}`)
+  } else {
+      res.set('Cache-control', `no-store`)
+  }
+  next()
+}
+
+app.use(setCache)
+````
+
+### 3. Verminder de resolutie en geef een vaste grootte
+Om het grootste pijnpunt weg te halen moest de resolutie van de verkregen data worden vermindert. Dit kan door in de html .slice te gebruiken. Dit zorgt voor een kortere laad tijd en zal de performance verbeteren. Tevens hebben de foto's nu een vaste breedte zodat de structuur van de pagina minder vaak hoeft te veranderen wat ook weer zorgt voor een betere performance.
+````
 
 
 
