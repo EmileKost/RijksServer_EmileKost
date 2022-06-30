@@ -5,6 +5,8 @@ const assets = [
     'pleuris.js',
     'images/logoRijks.png',
     'error.html',
+    'CSS/fonts/Dosis-Light.ttf',
+    'CSS/fonts/Dosis-Medium.ttf'
 ];
 
 //Install event
@@ -21,7 +23,7 @@ self.addEventListener('install', (event) => {
 //Activate event
 self.addEventListener('activate', (event) => {
     //console.log('The server worker has been activated');
-    event.waitUntil(
+  event.waitUntil(
         caches.keys().then(keys => {
             return Promise.all(keys
                 .filter(key => key !== staticCacheName)

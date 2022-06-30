@@ -3,141 +3,169 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: dosisLight;
+    src: url("fonts/Dosis-Light.ttf");
+}
+
+@font-face {
+    font-family: dosisMedium;
+    src: url('fonts/Dosis-Medium.ttf');
+}
 
 body {
-    font-family: montserrat;
-    background: #212529;
+    background-color: #01161e;
 }
 
-header {
-    height: 5em;
-    display: flex;
-    background-color: #343a40;
-    border-bottom: 3px solid #e8eddf;
+h1 {
+    font-family: dosisLight, sans-serif;
+    color: #fefefe;
 }
 
-header h1 {
-    color: #e8eddf;
-    opacity: 95%;
-    font-size: 5vw ;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 2.5%;
-}
-
-a {
-    text-decoration: none;
-    color: #e8eddf;
-}
-
-input {
-    width: 250px;
-    height: 4vh;
-    margin-top: 3%;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
-    background: #e8eddf;
-    border: none;
-    border-radius: 15px;
-}
-
-input {
-    display: row;
-    flex-direction: column;
-    justify-content: center;
-}
-
-button {
-    align-content: center;
-    width: 100px;
-    height: 30px;
-    background-color: #2a9d8f;
-    border: 2px solid #2a9d8f;
-    border-radius: 15px;
-}
-
-input::placeholder {
-    color :#343a40;
+p {
+    font-family: dosisLight, sans-serif;
 }
 
 img {
-    width: 95%;
-    margin-top: 2.5%;
-    margin-right: 2.5%;
-    margin-left: 2.5%;
-    border-radius: 0.5%;
-    box-shadow: 1px 1px #e8eddf;
+    height: 200px;
 }
 
-main p {
-    font-size: 3vw;
-    margin-left: 2.5%;
-    margin-top: 1.5%;
-    margin-bottom: 1.5%;
-    color: #edf2f4;
+header h1 {
+    padding-top: 40px;
+    padding-left: 60px;
+    font-size: 40px;
 }
 
-
-h2 {
-   margin-top: 5%;
-   margin-left: 2.5%;
-   margin-right: 7.5%;
-   font-size: 3vw;
-   color: #e8eddf;
+header {
+    margin-bottom: 50px;
 }
 
-#koptekst {
-    margin-left: 2.5%;
-    margin-right: 7.5%;
-    font-size: 5vw;
-    color: #e8eddf;
+main {
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#error {
-    text-align: center;
-    font-size: 30px;
+main p:first-of-type {
+    color: #fefefe;
+    width: 90%;
+    font-size: 18px;
+    margin-right: 10%;
+    margin-bottom: 50px;
 }
 
-#feedback-melding {
-    color:#e8eddf;
-    padding: 2%;
-    text-align: center;
-    font-weight: bold;
-    margin-top: 5%;
-    margin-left: 5%;
-    margin-right: 5%;
+form input {
+    height: 30px;
+    width: 350px;
+    border: 1px solid #49a078;
+    background-color: #01161e;
 }
 
-#error-melding {
-    color: #e8eddf;
-    text-align: center;
-    font-weight: bold;
+form input::placeholder {
+    padding-left: 15px;
+    color: #fefefe;
+    font-family: dosisLight, sans-serif;
 }
 
-#resultatenHeader{
-    margin-left: 2.5%;
-    margin-top: 5%;
-    text-align: left;
-    color: #e8eddf !important;
+form input:focus {
+    padding-left: 15px;
+    color: #fefefe;
+    font-family: dosisLight, sans-serif;
 }
 
-footer {
-    margin-bottom: 20%;
+@media  screen and (max-width: 550px) {
+    form input {
+        width: 200px;
+    }
 }
 
-.hide {
-    display: none;
+button {
+    height: 28px;
+    width: 100px;
+    background-color: #49a078;
+    border: none;
+    font-family: dosisLight, sans-serif;
+    color: #fefefe;
 }
 
-#eind-melding {
-    text-align: center;
-    color:#e8eddf
+button:hover {
+    transform: scale(0.9);
+    font-family: dosisMedium, sans-serif;
 }
 
-/* Styling voor error pagina */
-
-#main-error p {
-    text-align: center;
-    margin-top: 50%;
-    margin-bottom: 50%;
+ul {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
+
+li h2 {
+    text-decoration: none;
+    font-family: dosisLight, sans-serif;
+    color: #01161e;
+    height: 80px;
+}
+
+h2:hover {
+    color: #49a078;
+}
+
+li {
+    list-style: none;
+    background-color: #fefefe;
+    margin-bottom: 20px;
+    width: 320px;
+    padding: 30px;
+    margin-right: 15px;
+}
+ li div {
+     margin-top: 25px;
+     width: 100%;
+     display: flex;
+     justify-content: center;
+ }
+
+ img:hover {
+     transform: scale(0.95);
+     border-radius: 15px;
+ }
+
+ /* Details page */
+
+ article {
+     width: 80vw;
+     margin-left: auto;
+     margin-right: auto;
+     background-color: #fefefe;
+     margin-top: 100px;
+ }
+
+ article h2 {
+     text-align: center;
+     padding-top: 50px;
+     font-family: dosisMedium, sans-serif;
+     padding-bottom: 20px;
+     height: auto;
+ }
+
+ article div {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+ }
+
+ article h3 {
+     padding-top: 20px;
+     font-family: dosisLight, sans-serif;
+     text-align: center;
+ }
+
+#description {
+     width: 60vw;
+     margin-left: auto;
+     margin-right: auto;
+     font-family: dosisLight, sans-serif;
+     color: #01161e;
+     padding-bottom: 40px;
+ }

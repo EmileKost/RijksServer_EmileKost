@@ -1,38 +1,33 @@
 <%- include('./partials/head') %>
 
 <header>
-    <h1>Rijksmuseum Kunstwerken</h1>
-    <section></section>
-    <p></p>
+    <h1>Rijks Kunstwerken Bibliotheek</h1>
 </header>
 <main>
-    <p id="feedback-melding"></p>
-<article id="error-melding">
-    <p></p>
-</article>
+    <p>
+        Welkom bij de Rijksmuseum online kunstwerken bibliotheek. Ontdek
+        hier nieuwe kunstwerken of zoek zelf naar jouw favoriete werken!
+        Veel plezier met deze online Rijksmuseum
+    </p>
 <form id="searchForm" method="GET" action="/search">
     <input id="searchBalk" type="search" name="q" placeholder="Kunstwerk zoeken...">
     <button type="submit" id="searchButton" value="search">Zoeken</button>
 </form>
-<h2 id="error"></h2>
-<section>
-    <h1 id="results-header"></h1>
-    <ul id="resultsList"></ul>
-</section>
-<section id="mainContent" class="">
    <ul>
      <% data.forEach((artObject) => { %>
-    <a href="<%=artObject.objectNumber%>">
     <li>
         <h2>
-            <%=artObject.longTitle%>
+            <%=artObject.title%>
            </h2>
+           <div>
+            <a href="<%=artObject.objectNumber%>">
+                <img src=<%=artObject.webImage.url.slice(0, -3)+"=s500" %> alt=<%=artObject.title%>>
+             </a>
+           </div>
         <p>
-            <%=artObject.titles%>
+            <%=artObject.title%>
         </p>
-        <img src=<%=artObject.webImage.url.slice(0, -3)+"=s300"%> alt=<%=artObject.title%>>
         </li>
-        </a>
     <% }) %>   
 </ul>
 </section>
@@ -41,4 +36,4 @@
 
 <%- include('./partials/foot') %>
 
-  
+<!-- .slice(0, -3)+"=s500" -->

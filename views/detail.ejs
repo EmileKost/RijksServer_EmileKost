@@ -1,15 +1,14 @@
 <%- include('./partials/head') %>
-<header>
-    <h1><%=data.title%></h1>
-</header>
+
 <main>
-   <ul>
-       <li>
-           <img src="<%=data.webImage.url.slice(0, -3)+"=s300"%>">
-       <h2><%=data.longTitle%></h2>
-       <p><%=data.plaqueDescriptionEnglish%></p>
-       </li>
-   </ul>
+    <article>
+        <h2><%= data.longTitle %></h2>
+        <div>
+            <img src="<%=data.webImage.url.slice(0, -3)+"=s300"%>">
+        </div>
+        <h3><%=data.longTitle%></h3>
+        <p id="description"><%=data.plaqueDescriptionEnglish%></p>
+    </article>
 </main>
 
 <%- include('./partials/foot') %>
