@@ -1,6 +1,8 @@
 
 # Rijks Kunstwerken Bibliotheek
 
+![Screenshot 2023-05-16 at 10 01 56](https://github.com/EmileKost/RijksServer_EmileKost/assets/70690100/ac5f0575-386c-4d35-9df0-8b0f97f51568)
+
 ## Inleiding
 Voor dit project heb ik mijn WAFS's project verder ontwikkelt en omgebouwd tot een server side gerenderde webapp. Hiervoor heb ik Node.js en EJS gebruikt gecombineerd met verschillende dependencies om zo tot dit werkende eindproduct te zijn gekomen. De Rijks Kunstwerken Bibliotheek laat de gebruiker browsen naar kunstwerken. Ook kan de gebruiker zoeken naar kunstwerken en kan hij de detailpagina van elk kunstwerk bezoeken. De kunstwerken komen uit de Rijksmuseum API.
 
